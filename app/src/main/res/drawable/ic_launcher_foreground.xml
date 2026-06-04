@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#1A6B3C"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+
+    <!-- Left bracket { -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M32,28 C28,28 26,30 26,34 L26,40 C26,44 24,46 20,46 L20,50 C24,50 26,52 26,56 L26,62 C26,66 28,68 32,68 L36,68 L36,64 L33,64 C31,64 30,63 30,61 L30,55 C30,51 28,49 25,48 C28,47 30,45 30,41 L30,35 C30,33 31,32 33,32 L36,32 L36,28 Z" />
+
+    <!-- Right bracket } -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:pathData="M76,28 L72,28 L72,32 L75,32 C77,32 78,33 78,35 L78,41 C78,45 80,47 83,48 C80,49 78,51 78,55 L78,61 C78,63 77,64 75,64 L72,64 L72,68 L76,68 C80,68 82,66 82,62 L82,56 C82,52 84,50 88,50 L88,46 C84,46 82,44 82,40 L82,34 C82,30 80,28 76,28 Z" />
+
+    <!-- Center code symbol / -->
+    <path
+        android:fillColor="#86EFAC"
+        android:pathData="M48,68 L58,28 L62,28 L52,68 Z" />
+
+</vector>

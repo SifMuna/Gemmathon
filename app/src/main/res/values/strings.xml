@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gemmathon</string>
+    <string name="model_setup_title">Model Setup</string>
+    <string name="model_path_hint">/sdcard/Download/gemma-4-E2B-it.task</string>
+    <string name="load_model">Load Model</string>
+    <string name="run_task">Run with Gemma</string>
+    <string name="task_hint">e.g. write a script to sort a list</string>
+    <string name="model_loading">Loading model…</string>
+    <string name="model_loaded">Model loaded successfully</string>
+    <string name="generating_code">Generating Python code…</string>
+    <string name="executing_code">Executing Python code…</string>
+    <string name="evaluating">Evaluating results…</string>
+    <string name="task_success">Task completed successfully!</string>
+    <string name="task_failed">Task failed after max attempts</string>
+    <string name="rewriting">Rewriting code based on feedback…</string>
+    <string name="reset">Reset</string>
+    <string name="browse_model">Browse for Model File</string>
+    <string name="default_path_button">Load from Default Path</string>
+    <string name="setup_instruction_1">Download the Gemma 4 E2B model from Google AI Edge</string>
+    <string name="setup_instruction_2">Place the .task file at: /sdcard/Download/gemma-4-E2B-it.task</string>
+    <string name="setup_instruction_3">Tap Load Model or Browse below</string>
+</resources>
