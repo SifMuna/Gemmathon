@@ -149,7 +149,7 @@ fun ModelSetupScreen(
 
                     SetupStep(
                         number = "1",
-                        text = "Download the Gemma 4 E2B model file from Google AI Edge"
+                        text = "Download the Gemma 4 E2B model file from litert-community on Hugging Face"
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     SetupStep(
@@ -172,7 +172,7 @@ fun ModelSetupScreen(
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
-                                text = "/sdcard/Download/gemma-4-E2B-it.task",
+                                text = "/sdcard/Download/gemma-4-E2B-it-web.task",
                                 fontFamily = FontFamily.Monospace,
                                 fontSize = 12.sp,
                                 color = MaterialTheme.colorScheme.primary,
@@ -211,7 +211,7 @@ fun ModelSetupScreen(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     ModelDetail("Model", "Gemma 4 E2B Instruct")
-                    ModelDetail("Parameters", "2B (quantized for on-device)")
+                    ModelDetail("Parameters", "~2B effective (quantized)")
                     ModelDetail("Target Device", "Pixel 8a (arm64, Android 14+)")
                     ModelDetail("Framework", "Google AI Edge / MediaPipe")
                     ModelDetail("File Format", ".task (MediaPipe LLM)")

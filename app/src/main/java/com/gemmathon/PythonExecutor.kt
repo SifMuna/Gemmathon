@@ -22,41 +22,13 @@ class PythonExecutor {
         var exitCode = 0
 
         try {
-            val py = Python.getInstance()
-            val sys = py.getModule("sys")
-            val io = py.getModule("io")
-
-            // Create StringIO buffers for capturing output
-            val capturedOut = io.callAttr("StringIO")
-            val capturedErr = io.callAttr("StringIO")
-
-            // Redirect stdout and stderr
-            val originalStdout = sys["stdout"]
-            val originalStderr = sys["stderr"]
-            sys["stdout"] = capturedOut
-            sys["stderr"] = capturedErr
-
-            try {
-                // Execute the code string
-                py.getBuiltins().callAttr("exec", code)
-            } catch (e: com.chaquo.python.PyException) {
-                Log.w(tag, "Python execution raised exception: ${e.message}")
-                stderr += "\nPyException: ${e.message}"
-                exitCode = 1
-            } catch (e: Exception) {
-                Log.w(tag, "Exception during Python exec: ${e.message}")
-                stderr += "\nException: ${e.message}"
-                exitCode = 1
-            } finally {
-                // Restore original stdout/stderr
-                sys["stdout"] = originalStdout
-                sys["stderr"] = originalStderr
-            }
-
-            // Get captured output
-            stdout = capturedOut.callAttr("getvalue").toString()
-            stderr = capturedErr.callAttr("getvalue").toString() + stderr
-
+            val result = Python.getInstance()
+                .getModule("code_runner")
+                .callAttr("run", code)
+                .asList()
+            stdout = result[0].toString()
+            stderr = result[1].toString()
+            exitCode = result[2].toInt()
             Log.d(tag, "Execution complete. stdout=${stdout.take(200)}, stderr=${stderr.take(200)}, exit=$exitCode")
         } catch (e: Exception) {
             Log.e(tag, "Failed to execute Python code", e)
